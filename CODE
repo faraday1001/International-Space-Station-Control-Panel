@@ -1,0 +1,41 @@
+# Gerekli kütüphaneleri import edin
+import time
+
+# Kontrol panelinde bulunan bazı düğmeleri tanımlayın
+power_button = False
+thruster_1 = False
+thruster_2 = False
+thruster_3 = False
+
+# Bir döngü oluşturun
+while True:
+  # Kullanıcıdan bir komut alın
+  command = input("Komut girin: ")
+
+  # Eğer komut "çıkış" ise döngüden çıkın
+  if command == "çıkış":
+    break
+
+  # Eğer komut "güç" ise güç düğmesini açın/kapatın
+  elif command == "güç":
+    power_button = not power_button
+
+  # Eğer komut "ithalat 1" ise ithalat 1 düğmesini açın/kapatın
+  elif command == "ithalat 1":
+    thruster_1 = not thruster_1
+
+  # Eğer komut "ithalat 2" ise ithalat 2 düğmesini açın/kapatın
+  elif command == "ithalat 2":
+    thruster_2 = not thruster_2
+
+  # Eğer komut "ithalat 3" ise ithalat 3 düğmesini açın/kapatın
+  elif command == "ithalat 3":
+    thruster_3 = not thruster_3
+
+  # Kontrol panelini güncelleyin
+  print("Uluslararası Uzay İstasyonu Kontrol Paneli")
+  print("Güç: ", power_button)
+  print("İthalat 1: ", thruster_1)
+  print("İthalat 2: ", thruster_2)
+  print("İthalat 3: ", thruster_3)
+  #made by faraday1001
